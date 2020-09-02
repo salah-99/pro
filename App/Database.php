@@ -6,7 +6,7 @@
         private $pass;
         private $pdo;   
         public $err="";
-        public function __construct($dsn="localhost", $dbname="travel_1", $dbuser="root", $pass=""){
+        public function __construct($dsn="localhost", $dbname="travel_2", $dbuser="root", $pass=""){
             $this->dsn= $dsn;
             $this->dbname= $dbname;
             $this->dbuser= $dbuser;
@@ -15,7 +15,7 @@
         
         public function getpdo(){
             try{
-            $pdo=new PDO('mysql:host=localhost;dbname=travel_1','root','');
+            $pdo=new PDO('mysql:host=localhost;dbname=travel_2','root','');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo= $pdo;
             } catch(EXCEPTION $libiti){
